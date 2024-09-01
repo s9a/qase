@@ -24,6 +24,9 @@
   (prefers-contrast: less),
   (prefers-color-scheme: dark) {
   :root {
+    --tape-loud: orange;
+    --tape-luvu: turquoise;
+    --tape-bluv: skyblue;
     --tape-watt: pink;
   }
 }
@@ -89,6 +92,6 @@
   box-shadow: 0 0 1ch 1ch darkviolet;
 }
 
-kbd {
-  
+:any-link:hover {
+  text-decoration-style: double;  
 }
