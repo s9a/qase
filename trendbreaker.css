@@ -1,7 +1,31 @@
+/* https://s9a.page/tape */
+:root{--tape-filter:none;--tape-bluv:#11dff1;--tape-play:#fbbfff;--tape-loud:#eee833;--tape-luvu:#44f477;--tape-blaq:#0e0e0e;--tape-watt:#e0e0e0;--tape-hex:#e0e0e0;--tape-mix:transparent}.tape-watt{--tape-hex:var(--tape-watt)}.tape-luvu{--tape-hex:var(--tape-luvu)}.tape-loud{--tape-hex:var(--tape-loud)}.tape-play{--tape-hex:var(--tape-play)}.tape-bluv{--tape-hex:var(--tape-bluv)}.tape-flat{border-color:transparent}.tape-flap{border-color:currentColor}.tape-flow{--tape-remix:none}.tape-flow :not(.tape-skip){background-color:transparent;color:inherit}.tape-blaq,.tape-bluv,.tape-loud,.tape-luvu,.tape-play,.tape-watt{--tape-mix:var(--tape-hex);--tape-remix:none;color:var(--tape-blaq)!important;background-color:var(--tape-mix)!important;background-image:var(--tape-remix);filter:var(--tape-filter)}.tape-blaq{--tape-mix:var(--tape-blaq);color:var(--tape-hex)!important}.tape-erase,.tape-erase *{color:transparent!important}
+
+/* play. */
+
+::selection {
+  background: deepskyblue;
+  color: indigo;
+}
+
 .all-we-got {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   font-size: calc(1em + 1vw + 1vh);
-  line-height: 1.5;
+  line-height: 1.618;
+}
+
+@media (orientation: landscape) {
+  .all-we-got {
+    font-family: monospace;
+  }
+}
+
+@media
+  (prefers-contrast: less),
+  (prefers-color-scheme: dark) {
+  :root {
+    --tape-watt: pink;
+  }
 }
 
 .all-we-got * {
@@ -9,17 +33,13 @@
   font-family: inherit;
 }
 
-.all-we-got :focus {
-  outline-color: MediumVioletRed;
-  outline-style: dashed;
-}
-
 .be-easy-with-my-heart {
-  margin: 0;
+  margin: 0 0 3em;
 }
 
 .guard-down {
-  font: inherit;
+  font-size: 1.618em;
+  font-weight: inherit;
 }
 
 .what-would-it-change {
@@ -56,29 +76,19 @@
   padding: 1rem;
 }
 
-/* https://unpkg.com/@s9a/tape@0.2.0/tape.css */
-:root {
-  --tape-white: #f5f5f5;
-  --tape-black: #090909;
-  --tape-pink: #fbbfff;
-  --tape-yellow: #eee833;
-  --tape-blue: #11dff1;
-  --tape-green: #44f477;}
-.tape-white { --tape-hex: var(--tape-white) }
-.tape-blue { --tape-hex: var(--tape-blue) }
-.tape-pink { --tape-hex: var(--tape-pink) }
-.tape-green { --tape-hex: var(--tape-green) }
-.tape-yellow { --tape-hex: var(--tape-yellow) }
-.tape-clean:not(.tape-unclean),
-.tape-clean :not(.tape-unclean) {
-  background: transparent;
-  color: inherit;}
-.tape-flat:not(.tape-unflat),
-.tape-flat :not(.tape-unflat) {
-  border-color: transparent;}
-.tape-blue,.tape-pink,.tape-green,.tape-yellow,.tape-white {
-  background: var(--tape-hex) !important;
-  color: var(--tape-black) !important;}
-.tape-black {
-  background: var(--tape-black) !important;
-  color: var(--tape-hex, var(--tape-white)) !important;}
+.bold {
+  font-weight: bold;
+}
+
+[href^="#"] {
+  text-decoration-style: dashed;
+}
+
+:focus {
+  outline: thick groove;
+  box-shadow: 0 0 1ch 1ch darkviolet;
+}
+
+kbd {
+  
+}
