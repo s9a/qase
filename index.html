@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html lang="en-US" class="all-we-got tape-clean tape-pink">
-<title>You lost me at ________.</title>
+<html lang="en-US" class="all-we-got tape-flow tape-play">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="YLMA ________. Blog series from s9a">
+
+<title>qase: base tag bug</title>
+
+<meta name="theme-color" content="#fbbfff">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="base tag bug if you click stylesheet href value">
 
 <link rel="stylesheet" href="trendbreaker.css">
 
 <body class="be-easy-with-my-heart">
 
-<header class="love-is-easy tape-white">
-  <h1 class="erase-your-scars guard-down">
-    <a href="https://s9a.github.io/ylma/" class="face-your-dark"><abbr title="you lost me at" class="tape-black">ylma</abbr></a>
-  </h1>
-</header>
-
-<section class="on-the-wall" aria-label="1 article">
-  <a
-    class="lessons-feel-new cant-you-see-me guard-down tape-black"
-    href="https://s9a.github.io/ylma/texte_centre"
-    >texte centré</a>
-</section>
+<article>
+  <header class="love-is-easy tape-watt">
+    <h1 class="erase-your-scars guard-down">
+      <b>q</b>ase
+    </h1>
+    buggy <code>&lt;base&gt;</code> behavior when viewing source
+  </header>
+  <div class="on-the-wall" id="bug">
+    <h2>
+      <a href="#bug" class="cant-you-see-me guard-down tape-blaq">how to reproduce this base bug</a>
+    </h2>
+    <p>
+      Open
+      <a href="https://webmural.com/clim8">webmural.com/<cite>clim8</cite></a>
+      in different browsers and
+      <code class="bold">view-source</code>&hellip;
+    </p>
+    <p>
+      Click the <code>href</code> values in the
+      <a href="https://developer.mozilla.org/HTML/Element/link"><code>link</code></a> tags surrounding the
+      <a href="https://developer.mozilla.org/HTML/Element/base"><code>base</code></a> tag. The stylesheet 
+      filenames should open the files
+      because they precede <code>base</code> tag.
+      The <code>base</code> tag only applies to subsequent links.
+      They load the stylesheets properly.
+      This bug happens when viewing source.
+    </p>
+    <p>
+      Firefox behaves properly.
+      Currently Chrome and Brave
+      behave buggy and give 404 error.
+      <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-base-element">Please behave properly</a>.
+      Thank <a href="https://octopus.boo">you <kbd class="bold">∞)</kbd></a>
+    </p>
+  </div>
+</article>
